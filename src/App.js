@@ -21,7 +21,7 @@ function App() {
         <ColorGame />
       </main>
       <div id="explanation">
-        <a id="close" href="#">
+        <a id="close" href="#hide">
           X
         </a>
         <p>
