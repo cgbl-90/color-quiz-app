@@ -1,3 +1,7 @@
+a {
+  text-decoration: none;
+}
+
 img {
   height: 10vmin;
   margin: 20px 50px;
@@ -95,7 +99,7 @@ u {
   border-radius: 4px;
 }
 
-span {
+#open {
   border-radius: 45%;
   padding: 1px 12px;
   border: 3px solid #1d49aa;
@@ -103,15 +107,16 @@ span {
   transition: .3s ease-in-out;
 }
 
-span:hover,
-span:focus {
+#open:hover,
+#open:focus {
   background-color: #1d49aa;
   color: white;
 }
 
-.explanation {
+#explanation {
+  visibility: hidden;
   width: 300px;
-  padding: 20px;
+  padding: 30px;
   text-align: right;
   position: absolute;
   right: 10px;
@@ -120,4 +125,29 @@ span:focus {
   color: white;
   border-radius: 4px;
   font-weight: 500;
+}
+
+#close {
+  position: relative;
+  color: white;
+  transition: .3s ease-in-out;
+}
+
+#close:hover,
+#close:focus {
+  color: yellow;
+  font-weight: 900;
+}
+
+#explanation:target {
+  visibility: visible;
+}
+
+.score {
+  padding: 4px 10px;
+  background-color: #1d49aa;
+  color: white;
+  width: fit-content;
+  margin: 10px auto;
+  border-radius: 4px;
 }

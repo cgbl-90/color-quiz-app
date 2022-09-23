@@ -5,6 +5,8 @@ export default function ColorGame() {
   let [color, setColor] = useState("255, 255, 255");
   let [message, setMessage] = useState(" ");
   let [rows] = useState([]);
+  let [wins, setWins] = useState(0);
+  let [loses, setLoses] = useState(0);
   const chosen = Math.random() * (5 - 0) + 0;
 
   function generateColors() {
@@ -26,15 +28,22 @@ export default function ColorGame() {
     if (message !== "Try again!") {
       if (Math.round(chosen).toString() === event.currentTarget.id) {
         setMessage("Correct!");
+        setWins(wins + 1);
       } else setMessage("Try again!");
-    } else generateColors();
+    } else {
+      setLoses(loses + 1);
+      generateColors();
+    }
   }
 
   return (
     <div className="card">
-      <h1>
-        Can you guess this color?
-      </h1>
+      <h2>
+        Can you guess this color{" "}
+        <a id="open" href="#explanation">
+          ?
+        </a>
+      </h2>
       <h1>
         <u>{color}</u>
       </h1>
@@ -53,7 +62,7 @@ export default function ColorGame() {
       {message === " " ? (
         <button onClick={generateColors}>LET'S START!</button>
       ) : (
-        <h2>{message}</h2>
+        <h3>{message}</h3>
       )}
       {message === "Correct!" ? (
         <button onClick={generateColors}>LET'S GO!</button>
@@ -61,6 +70,10 @@ export default function ColorGame() {
         " "
       )}
       <br />
+      <h3 className="score">
+        {" "}
+        WINS: {wins} | LOSES: {loses}
+      </h3>
       <br />
     </div>
   );
