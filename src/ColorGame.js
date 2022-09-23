@@ -40,7 +40,7 @@ export default function ColorGame() {
     <div className="card">
       <h2>
         Can you guess this color{" "}
-        <a id="open" href="/explanation">
+        <a id="open" href="#explanation">
           ?
         </a>
       </h2>
