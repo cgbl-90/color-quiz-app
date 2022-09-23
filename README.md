@@ -2,6 +2,10 @@
 
 This is a project focused perfecting my knowledge of useState uses and Math functions.
 
+#### DEMO
+
+https://color-quiz-by-cgbl.netlify.app/#hide
+
 #### What does it do?
 
 1. Generates 6 random colors
