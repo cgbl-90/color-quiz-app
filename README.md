@@ -25,3 +25,6 @@ In the project directory, you can run:
 ### `npm run eject`
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+![image](https://user-images.githubusercontent.com/58992828/192740947-a1fb73c4-418c-4754-9835-e8bd74dec013.png)
+
